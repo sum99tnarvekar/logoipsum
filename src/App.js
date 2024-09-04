@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import AboutUs from "./components/AboutUs";
+import { ModeCounter } from "./context/ModeCounter";
+import NewsEverything from "./components/news-everything/NewsEverything";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NewsHeadlines from "./components/news-headlines/NewsHeadlines";
+import NewsSources from "./components/news-sources/NewsSources";
+
 
 function App() {
+    const [mode, setMode] = React.useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+          <ModeCounter.Provider value={{ mode, setMode }}>
+              <Router>
+                  <Navbar/>
+                  <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/everything/:topic" element={<NewsEverything />} />
+                      <Route path="/headlines" element={<NewsHeadlines />} />
+                      <Route path="/sources" element={<NewsSources />} />
+                      <Route path="/about" element={<AboutUs />} />
+                  </Routes>
+                  <Footer/>
+              </Router>
+          </ModeCounter.Provider>
+      </>
   );
 }
 
