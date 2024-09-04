@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/logoipsum/static/css/main.7b75ef53.css",
+    "main.js": "/logoipsum/static/js/main.f701b620.js",
+    "static/js/453.36c22de2.chunk.js": "/logoipsum/static/js/453.36c22de2.chunk.js",
+    "static/media/loader.gif": "/logoipsum/static/media/loader.b51df3f3ec072548cb48.gif",
+    "index.html": "/logoipsum/index.html",
+    "main.7b75ef53.css.map": "/logoipsum/static/css/main.7b75ef53.css.map",
+    "main.f701b620.js.map": "/logoipsum/static/js/main.f701b620.js.map",
+    "453.36c22de2.chunk.js.map": "/logoipsum/static/js/453.36c22de2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b75ef53.css",
+    "static/js/main.f701b620.js"
+  ]
+}
